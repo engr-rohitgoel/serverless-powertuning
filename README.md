@@ -332,9 +332,22 @@ Execute Power Tuning(Step Function) with below input that will execute lambda wi
 }
 ```
 
-Below will be the output of execution which will give graph showing average duration (per invocation) and average cost (per invocation) 
+## Below will be the output of execution which will give graph showing average duration (per invocation) and average cost (per invocation) for multiple memory invocations
 
 ![Graph](./images/graph.jpg)
+
+##  Performance & Cost Observations (AWS Lambda Power Tuning)
+
+| Memory | Avg Duration | Cost per Invoke | Behavior | Outcome |
+|---:|---:|---:|---|---|
+| 128 MB | ~1146 ms | ~0.00000241 | CPU constrained, high latency |  Avoid |
+| 256 MB | ~374 ms | ~0.00000158 | Better Cost and latency vs 128 MB |  Better than 128 Mb |
+| 512 MB | ~369 ms | ~0.00000311 | No benefit vs 256 MB; cost and Duration ↑ |  Worst Cost and Time |
+| **1024 MB** | **~55ms ms** | **~0.00000092** | Fastest & stable under load |  **Best Performance Profile** |
+
+**Conclusion:**  
+For this workload, **1024 MB** offers the best **latency consistency + throughput** with **lowest total execution cost**.
+
 
 ## Cleanup
 
