@@ -295,6 +295,8 @@ In this step, you deploy the API that you created to a stage called prod.
 
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
 
+
+
 ###  AWS Lambda Power Tuning
 
  AWS Lambda Power Tuning is a open-source tool which is actually a state machine powered by AWS Step Functions that helps you optimize your Lambda functions for cost and/or performance in a data-driven way.
@@ -308,9 +310,6 @@ We have successfully created a serverless API using API Gateway, Lambda, and Dyn
 
 3. Select aws-lambda-power-tuning and deploy
 
-  ![Aws Lambda Power Tuning](./images/aws-lambda-power-tuning.jpg)
-  ![Lambda Power Tuning](./images/lambda-power-tuning.jpg)
- 
 
 ## Execute Power Tuning for Lambda 
 
