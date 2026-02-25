@@ -303,7 +303,7 @@ Click Available Applications, type “power”, check “Show apps that create c
 Select aws-lambda-power-tuning
 
   ![Aws Lambda Power Tuning](./images/aws-lambda-power-tuning.jpg)
-
+  ![Lambda Power Tuning](./images/lambda-power-tuning.jpg)
  
 Scroll down, keep everything as is, check “I acknowledge that this app creates custom IAM roles”, click “Deploy”
 
