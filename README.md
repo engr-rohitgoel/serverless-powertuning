@@ -307,6 +307,13 @@ Select aws-lambda-power-tuning
  
 Scroll down, keep everything as is, check “I acknowledge that this app creates custom IAM roles”, click “Deploy”
 
+## Execute Power Tuning for Lambda 
+
+Execute Power Tuning(Step Function) with below input that will execute lambda with different memory combinations from 128 Mb to 1024 Mb
+
+![Power Tuning Input](./images/power-tuning-input.jpg)
+
+
 
 ## Cleanup
 
