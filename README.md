@@ -384,8 +384,8 @@ This will be very useful to determine the latency and we will check how increasi
 
 5.    Run the Collection with “Ramp up” under Load Profile, select “10” in Virtual users, and Test duration as 2 mins
  Note: 10 here is for concurrency limit available for lambda. if number is higher than lambda concurrency limit, API requests will fail with error "Too Many Requests"
+    ![Ramp](./images/ramp-up.jpg)
 
-     ![Ramp-Up](./images/ramp-up.jpg)
 
 
 Let it run for 2 mins. It will generate a pdf report which can be downloaded .
