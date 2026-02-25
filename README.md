@@ -299,6 +299,27 @@ Click Available Applications, type “power”, check “Show apps that create c
 
  ![Power Tuning](./images/power-tuning.jpg)
 
+ ```json
+{
+  "lambdaARN": "PUT YOUR LAMBDA ARN HERE",
+  "powerValues": [
+    128,
+    256,
+    512,
+    1024
+  ],
+  "num": 10,
+  "payload": {
+    "operation": "list",
+    "tableName": "lambda-apigateway",
+    "payload": {}
+  },
+  "parallelInvocation": true,
+  "strategy": "cost"
+}
+
+```
+
 
 Select aws-lambda-power-tuning
 
