@@ -1,10 +1,10 @@
 # serverless-powertuning
 
-## Lab Overview And High Level Design
+## Architecture Overview And High Level Design
 
 Let's start with the High Level Design.
-![High Level Design](./images/high-level-design.jpg)
-An Amazon API Gateway is a collection of resources and methods. For this tutorial, you create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+![High Level Design](./images/serverless.jpg)
+An Amazon API Gateway is a collection of resources and methods. For this architecture, you need to create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
@@ -41,6 +41,9 @@ The following is a sample request payload for a DynamoDB read item operation:
     }
 }
 ```
+
+## Once reources created, we will run Lambda Power tuning (AWS Step Functions) to find optimal Memory based on required AWS Well Architected Framwork Pillar Cost Optimisation and Performance Efficiency or a balanced approach.
+## Then we will trigger a Performance test with 10 Virtual Users using Postman Collection Runners to trigger POST APIs for 2 mins with Lambda Memory configuration 128 MB and 1024 MB and will compare the latency and throughput 
 
 ## Setup
 
