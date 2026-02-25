@@ -332,6 +332,10 @@ Execute Power Tuning(Step Function) with below input that will execute lambda wi
 }
 ```
 
+Below will be the output of execution which will give graph showing average duration (per invocation) and average cost (per invocation) 
+
+![Graph](./images/graph.jpg)
+
 ## Cleanup
 
 Let's clean up the resources we have created for this lab.
