@@ -2,11 +2,31 @@
 
 ## Architecture Overview And High Level Design
 
-Let's start with the High Level Design.
+## Architecture
+
+This repository demonstrates a simple serverless architecture built to evaluate AWS Lambda right-sizing using Lambda Power Tuning.
+
 ![High Level Design](./images/serverless.jpg)
 
+## The solution consists of:
 
-An Amazon API Gateway is a collection of resources and methods. For this architecture, you need to create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+Amazon API Gateway to expose RESTful endpoints
+
+AWS Lambda for compute and request processing
+
+Amazon DynamoDB for data persistence
+
+Amazon CloudWatch for logs and metrics
+
+AWS Step Functions–based Lambda Power Tuning to benchmark Lambda performance and cost across different memory configurations
+
+Postman collections to generate repeatable API traffic and validate performance results
+
+This setup enables data-driven comparison of execution duration and cost per invocation for different Lambda memory allocations.
+
+## High Level Design.
+
+An Amazon API Gateway is a collection of resources and methods. For this architecture, we will create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when we call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
